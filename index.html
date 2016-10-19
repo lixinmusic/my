@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://m.tuideli.com/index/index/play/cid/12453189 -->
+<html style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>阿拉斯加州的相册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="”X-UA-Compatible”" content="”IE=edge”">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="true">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+    <link rel="stylesheet" href="./阿拉斯加州的相册_files/weui.min.css">
+    <link rel="stylesheet" href="./阿拉斯加州的相册_files/editor.css">
+    <link rel="stylesheet" href="./阿拉斯加州的相册_files/text_animate.css">
+            
+        <script type="text/javascript">
+    	var card_hash = "12453189";
+    	var token = "5017815-05520d260ab41f5455c46d2d63af3721";
+    	var isShowPrinttp = "0";	
+    	var android_mymusic = "";
+    	var sys_type = "other";
+        var init_music_type = "sys";
+        var androidOldShow = "true";
+        var is_wx = "";
+        var clientType = "";
+    </script>
+
+        <script src="./阿拉斯加州的相册_files/zepto.min.js"></script>
+</head>
+<body style="padding: 0px; border: 0px; margin: 0px;">
+<script type="text/javascript">
+    var touchStartMusic = function(){
+        music_check_timeout = undefined;
+        function check_Music(){
+            // 阻塞执行 500 ms 执行一次
+            if(musicView != undefined && musicView.audioPlayer != undefined && musicView.audioPlayer.inited == true){
+                if(music_check_timeout != undefined){
+                    clearTimeout(music_check_timeout);
+                }
+                musicView.audioPlayer.isPlay = false;
+                musicView.audioPlayer._play();
+            }else{
+                music_check_timeout = setTimeout(check_Music, 500);
+            }
+        }
+        check_Music();
+        document.removeEventListener('touchstart',touchStartMusic);
+    }
+    document.addEventListener('touchstart',touchStartMusic);
+</script>
+
+
+<!-- 2.0 -->
+<div style="position: relative; width: 320px; height: 504px; top: 32px;" id="gameDiv">
+    <div class="lyricBar" style="visibility: visible;">
+        <ul><li><span>不停吵闹的世上<span class="lyricMask" style="width: 0%; animation: StretchleftIn1 2.807s linear 0s;">不停吵闹的世上</span></span></li></ul>
+    </div>
+    <div id="TextView">
+    </div>
+<div id="canvasDiv" style="width: 320px; height: 504px;"><canvas id="egretCanvas" width="640" height="1008" style="width: 320px; height: 504px;"></canvas></div></div>
+
+
+<div class="musicWrap" style="right: 50%; margin-right: -190.5px;">
+    <a id="AudioBtn" href="javascript:;" class="on"></a>
+</div>
+
+<script>
+    function ToEditProduction(){
+        // 制作统计
+        /*$.ajax({
+         url: 'http://m.tuideli.com/Index/Index/makeStatistics/cid/12453189',
+         type: 'GET',
+         });*/
+
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        var ua = window.navigator.userAgent.toLowerCase();
+        // 是否为移动端浏览器
+       if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+           // 移动端浏览器
+           if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+               // 微信
+               window.location.href = 'http://mp.weixin.qq.com/s?__biz=MzIwNjU0MDMyNg==&mid=100001154&idx=1&sn=d3d2fd34b3f196c2ec48de7e7f8def64&chksm=17215ecb2056d7ddebe0f55999d24a4a0ae184168b4ef7069b6d482d3bcb5b7dd331c718d34b#wechat_redirect';
+           }else{
+               // android app 接口
+               if(typeof android != "undefined") {
+                   if(typeof android.closeWebView != "undefined") {
+                       android.closeWebView();
+                       return;
+                   }
+               }
+               // 非android app,且非微信
+               window.location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.xingluo.mpa';
+           }
+       } else {
+           // pc端浏览器
+           window.location.href = 'http://mp.weixin.qq.com/s?__biz=MzIwNjU0MDMyNg==&mid=100001154&idx=1&sn=d3d2fd34b3f196c2ec48de7e7f8def64&chksm=17215ecb2056d7ddebe0f55999d24a4a0ae184168b4ef7069b6d482d3bcb5b7dd331c718d34b#wechat_redirect';
+       }
+    }
+</script>
+<style type="text/css">
+    .show-jbBtn{
+        position: absolute;
+        bottom: 20%;
+        right: 5%;
+        margin-left: 190px;
+        width: 40px;
+        height: 20px;
+        font: 12px '微软雅黑';
+        text-align: center;
+        color: #ffffff;
+        line-height: 20px;
+    }
+
+    @media screen and (min-width: 1100px) { /*当屏幕尺寸大于1100px时，应用下面的CSS样式*/
+        .show-jbBtn{
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            margin-left: 170px;
+            width: 40px;
+            height: 20px;
+            font: 12px '微软雅黑';
+            text-align: center;
+            color: #ffffff;
+            line-height: 20px;
+        }
+    }
+
+    @media screen and (min-width: 500px) and (max-width: 1099px) { /*当屏幕尺寸大于500小于1100px时，应用下面的CSS样式*/
+        .show-jbBtn{
+            position: absolute;
+            bottom: 20%;
+            right: 5%;
+            /*margin-left: 170px;*/
+            width: 40px;
+            height: 20px;
+            font: 12px '微软雅黑';
+            text-align: center;
+            color: #ffffff;
+            line-height: 20px;
+        }
+    }
+</style>
+<span class="freeEdit">
+  <div class="text1">
+      <img onclick="ToEditProduction();" src="./阿拉斯加州的相册_files/top_2.png">
+  </div>
+  <div class="show-jbBtn">
+      <img src="./阿拉斯加州的相册_files/jbBtb1.png">
+      <!-- <span>举报</span> -->
+  </div>
+</span>
+<div class="qrcode-info" style="margin-left: 210.5px;">
+        <div class="section-detail">
+            <p class="shop-detail"><strong>手机扫码访问</strong></p>
+            <p class="weixin-title">微信“扫一扫”分享到朋友圈</p>
+            <p class="qr-code">
+                <img height="150px" src="./阿拉斯加州的相册_files/showQr">
+            </p>
+        </div>
+    </div>
+<style>
+.loadingWrap{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0px;
+  background: url("http://static.molixiangce.com/Public/Image/base/moli/bg.jpg");
+  /*background: url("http://static.molixiangce.com/Public/Image/base/moli/bg2.jpg");*/
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+.loadingFont{
+  background: url("http://static.molixiangce.com/Public/Image/base/moli/font.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  width: 130px;
+  height: 60px;
+  margin-left: -65px;
+}
+.loadingNum{
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  font: 18px 微软雅黑;
+  text-align: center;
+  margin-left: -50px;
+  color: white;
+}
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url("http://static.molixiangce.com/Public/Image/base/moli/logo1.png");
+  background-size: 100% 100%;
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  margin-top: -60%;
+  margin-left: -65px;
+}
+.waiquan{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -288px 0 0 -124px;
+  width: 185px;
+  height: 185px;
+  border-radius: 100%;
+  margin-top: -80%;
+  margin-left: -92px;
+}
+.xunzhuan {
+  width: 135px;
+  height: 135px;
+  position: absolute;
+  border-radius: 100%;
+  top: 50%; 
+  left: 50%;
+  opacity: 0.7;
+  box-shadow: rgba(255, 255, 255, 0.6) -10px -15px 13px -13px;
+  -webkit-animation: rotate 2s infinite linear;
+  margin-top: -60.7%;
+  margin-left: -68px;
+}
+.loaderConten{
+  position: absolute;
+  width: 135px;
+  height: 135px;
+  top: 30%;
+  left: 50%;
+  margin-left: -75px;
+  margin-top: -75px;
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+  }
+}
+</style>
+
+
+<div id="MusicView">
+    <ul class="sys">   
+	            <div class="music-sub-view sys">
+            <div class="sys-music">
+                <div class="musicType">
+                    <div class="all">
+                        <span class="all">全部</span>
+                        <span class="sweet">甜蜜</span>
+                        <span class="quiet">安静</span>
+                        <span class="relax">轻松</span>
+                        <span class="lonely">寂寞</span>
+                        <span class="happy">开心</span>
+                        <div class="clrBox"></div>
+                    </div>
+                </div>
+                <div id="MusicList" class="all">
+                    <li class="sweet">
+                            <div id="MusicItem74" class="musicItem lyric select">
+                                <div class="musicItemTitle"> 幸福感 </div>
+                                <div class="musicItemAfter">
+                                    <div class="musicStatus" data-info="http://7xo7gt.media1.z0.glb.clouddn.com/music/%E5%8D%A1%E9%80%9A%E6%A8%A1%E6%9D%BF%E3%80%90%E5%B9%B8%E7%A6%8F%E6%84%9F%E3%80%91%E5%AD%9F%E5%BA%AD%E8%8B%87-%E5%B9%B8%E7%A6%8F%E6%84%9F.mp3" data-lyric="http://static.molixiangce.com/Public/lyric/music_74.lrc?v=05280961233515"></div>
+                                    <span>歌词</span>                                    <div class="clrBox"></div>
+                                </div>
+                                <div class="clrBox"></div>
+                            </div>
+                        </li>                </div>
+            </div>
+            <div class="user-music">
+            	        	        <div style="padding:5px 25px;font-size:0.8rem;text-align:center">亲，现在最新版魔力相册APP已经支持自定义<br>音乐上传功能啦，快去看看吧~</div>
+                	<p style="text-align: center;;line-height:50px"><span id="addUserMusic" style="background:#c0c0c0;color:white">上传音乐</span></p>
+                	
+               		<div class="noUserMusic">
+                		<div class="noUserMusicPic">
+                			<img src="./阿拉斯加州的相册_files/shangch_music.png">
+                		</div>
+                		<p style="text-align: center;line-height:50px;color:#979797">暂无音乐</p>
+                		<p style="text-align: center;line-height:50px;font-size:1.2rem"><span id="addUserMusic" class="addUserMusic" style="background:#c0c0c0;color:white">上传音乐</span></p>
+                		<div style="padding:5px 25px;font-size:0.8rem;text-align:center;color:#979797">请在该魔力app中上传音乐</div>
+                	</div> 	
+        		                <div id="UserMusicList" class="all">
+                	                </div>
+            </div>
+        </div>
+    </ul>
+    <nav>
+        <a href="javascript:;" id="MusicCancel"></a>
+        <span></span>
+        <a href="javascript:;" id="MusicSelect"></a>
+    </nav>
+</div>
+<div id="userMusicConfirm">
+    <div class="content"><h1>确认删除？</h1></div>
+    <div id="cancel" onclick="userMusicView.delCancel()">否</div>
+    <div id="ok" onclick="userMusicView.delMuscic()">是</div>
+</div>
+<div style="display:none;" id="open_id"></div>
+
+
+<script src="./阿拉斯加州的相册_files/common.js"></script>
+<script src="./阿拉斯加州的相册_files/music.js"></script>
+<script>
+    var staticUrl = 'http://static.molixiangce.com/';
+</script>
+<script src="./阿拉斯加州的相册_files/text_config.js"></script>
+
+<script>
+    var mvCfg = {
+            cid : 12453189,
+            pics : ['http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933797341_505.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933800632_854.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933802859_759.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933804144_922.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933805561_383.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933807399_474.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933808974_871.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933810297_945.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933811678_411.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933813099_661.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933814616_282.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933816160_67.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933817651_645.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933818970_425.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933820381_711.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933833316_637.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933836259_16.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933839011_753.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443933841040_127.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443934875733_422.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443934878123_131.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443934880674_814.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443934882385_771.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443934883786_319.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443934885084_446.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443934886600_983.jpg','http://molixiangce.b0.upaiyun.com/upload/2015-10-04-oyC2vs6DDC_gu-BuPsI7a1eNfOfw/1443934888032_230.jpg',],
+    music : parseInt(74),
+    default_music:parseInt(74),
+    musictype:"sys",
+    tp : 30,
+    title : "阿拉斯加州的相册",
+            lyric : parseInt(1),
+    cover : parseInt(0),
+    coverTip : parseInt(0),
+    picsRotate: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,],
+    texts :[],
+    };
+    var canEdit = false;
+
+    // 文本转义
+    (function(){
+        for(var i=0,len=mvCfg.texts.length;i<len;++i) {
+            mvCfg.texts[i] = decodeEscapeHtml(mvCfg.texts[i]);
+        }
+    })();
+
+    function initFunc(){
+        lyricPlayer.init();
+        showTip();
+    }
+
+    function showTip(){
+        }
+
+    
+        // pc 端音乐按钮和二维码的自动对齐.
+        function adjustQRPos() {
+                        var width = parseInt($('#egretCanvas').css('width')) / 2;
+                        $('.qrcode-info').css('margin-left',width + 10 +'px');
+            $('.musicWrap').css('margin-right',(-width + 10) +'px');
+        }
+
+        $(function(){
+            $('.musicWrap').css('right','50%');
+            adjustQRPos();
+            $(window).resize(function() {
+                adjustQRPos();
+            });
+        });
+        
+    
+</script>
+
+
+    <script src="./阿拉斯加州的相册_files/play.js"></script>
+<!-- <script src="http://static.molixiangce.com/Public/js/print.js?v=05280961233515"></script> -->
+    <script>var document_class = "Main";</script>
+    <script src="./阿拉斯加州的相册_files/egret_require.js"></script>
+    <script src="./阿拉斯加州的相册_files/egret_loader_pc.js"></script>
+            <script src="./阿拉斯加州的相册_files/game-min.js"></script>
+    <script>
+        var support = [].map && document.createElement("canvas").getContext;
+        if (support) {
+            egret_h5.startGame();
+        }
+        else {
+            alert("Egret 不支持您当前的浏览器")
+        }
+    </script>
+
+
+	
+		<div style="display:none;" id="upyun_uid"></div>
+
+		<div class="app-panl">
+			<div class="printDialog_box">
+                <img class="close-app-panl" src="./阿拉斯加州的相册_files/close-print-pic-dailog.png" alt="" onclick="mianfeiPrin.closePrintDialog()">
+                <div class="printDialog_box_item">
+                    <img src="./阿拉斯加州的相册_files/start.png" alt="">
+                    <p>时光留影</p>
+                    <p>定格记忆</p>
+                    <div class="printDialog_box_item_btn printDialog_box_item_btn_print" onclick="mianfeiPrin.showPrintView()">一键打印</div>
+                </div>
+                <div class="printDialog_box_item">
+                    <img src="./阿拉斯加州的相册_files/start.png" alt="">
+                    <p>幸福瞬间</p>
+                    <p>一起分享</p>
+                    <div class="printDialog_box_item_btn printDialog_box_item_btn_share" onclick="mianfeiPrin.onOnekeyPrintShare()">分享</div>
+                </div>
+			</div>
+		</div>
+	   <div class="web-panl">
+            <div class="printDialog_box">
+                <div id="printCancel" onclick="mianfeiPrin.closePrintDialog()">
+                    <div class="cancel">
+                        <i class="weui_icon_clear weui_icon_clear2"></i>
+                    </div> 
+                </div>
+                <div class="success_icon">
+                     <i class="weui_icon_success_circle success_icon_box"></i>
+                </div>
+                <div class="success_msg">恭喜你，保存成功！</div>
+                <div id="printReturnEdit" class="printReturnEdit" onclick="mianfeiPrin.closePrintDialog()">编辑</div>
+                <div id="printShareBtn" class="printShareBtn" onclick="mianfeiPrin.showPrintView()">打印</div>
+                <div class="content">让回忆不褪色<br>永久保存你的故事<br>......</div>
+            </div>
+        </div>
+	<!-- 打印弹框部分 -->
+
+<!-- 注释掉给app测试
+-->
+<script src="./阿拉斯加州的相册_files/5017815"></script>
+<div style="display:none">
+    <!--script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255827037'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255827037' type='text/javascript'%3E%3C/script%3E"));</script-->
+    <script src="./阿拉斯加州的相册_files/z_stat.php" language="JavaScript"></script><script src="./阿拉斯加州的相册_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1255827037" target="_blank" title="站长统计">站长统计</a>
+</div>
+<style type="text/css">
+        a{
+            text-decoration: none;
+        }
+
+        .jb_infoContainer{
+            width: 77%;
+            height: 57.53%;
+            position: absolute;
+            top: 17.4%;
+            left: 50%;
+            margin-left: -38.5%;
+            background-color: white;
+            z-index: 9999;
+            display: none;
+        }
+        @media screen and (min-width: 600px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+            .jb_infoContainer{
+                width: 300px;
+                height: 57.53%;
+                position: absolute;
+                top: 17.4%;
+                left: 50%;
+                margin-left: -150px;
+                background-color: white;
+                z-index: 9999;
+                display: none;
+            }
+        }
+        .jb_title{
+            width: 100%;
+            height: 10.71%;
+            font:15px '微软雅黑';
+            color: white;
+            background-color: #d02c2c;
+            text-align: center;
+            display: -webkit-box;
+            -webkit-box-align: center;
+            -webkit-box-pack: center;
+
+        }
+        .jb_infoDiv{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .jb_content{
+            margin-left: 30px;
+            float: left;
+        }
+        .jb_chose{
+            width: 22px;
+            height: 22px;
+            float: right;
+            margin-right: 23px;
+            display: none;
+            margin-top: -2px;
+        }
+        .jb_chose img{
+            width: 22px;
+            height: 22px;
+        }
+        .jb_info{
+            height: 22px;
+            font:14px "微软雅黑";
+            color: #1d1d1d;
+            margin-top: 12.5px;
+            line-height: 22px;
+        }
+        #jb_qxBtn,#jb_tjBtn{
+            width: 75px;
+            height: 20px;
+            border-radius: 2px;
+            font:14px '微软雅黑';
+            text-align: center;
+            position: absolute;
+            bottom: 25px;
+        }
+        #jb_qxBtn{
+            color: white;
+            background-color: #bdbdbd;
+            float: left;
+            left: 30px;
+            line-height: 20px;
+        }
+        #jb_tjBtn{
+            color: white;
+            background-color: #d02c2c;
+            float: right;
+            right: 30px;
+            line-height: 20px;
+        }
+    </style>
+    <div class="jb_infoContainer">
+        <div class="jb_title">选择举报内容</div>
+        <div class="jb_infoDiv">
+            <div class="jb_info">
+                <div class="jb_content">政治谣言、常识性谣言</div>
+                <div id="1" class="jb_chose">
+                    <img src="./阿拉斯加州的相册_files/chose_02.png">
+                </div>
+            </div>
+            <div class="jb_info">
+                <div class="jb_content">色情、赌博、毒品</div>
+                <div id="2" class="jb_chose">
+                    <img src="./阿拉斯加州的相册_files/chose_02.png">
+                </div>
+            </div>
+            <div class="jb_info">
+                <div class="jb_content">欺诈、社会负面</div>
+                <div id="3" class="jb_chose">
+                    <img src="./阿拉斯加州的相册_files/chose_02.png">
+                </div>
+            </div>
+            <div class="jb_info">
+                <div class="jb_content">邪教、传销、非法集会</div>
+                <div id="4" class="jb_chose">
+                    <img src="./阿拉斯加州的相册_files/chose_02.png">
+                </div>
+            </div>
+            <div class="jb_info">
+                <div class="jb_content">其他原因</div>
+                <div id="5" class="jb_chose">
+                    <img src="./阿拉斯加州的相册_files/chose_02.png">
+                </div>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <div id="jb_qxBtn">取消</div>
+        <div id="jb_tjBtn">提交举报</div>
+    </div>
+    <script type="text/javascript">
+
+        $('.jb_info').click(function(){
+            $('.jb_info').css({'color':'#1d1d1d'});
+            if($(this).children('.jb_chose').css("display") == "none"){
+                $('.jb_chose').hide();
+                $(this).css({'color':'red'});
+                $(this).children('.jb_chose').show();
+            }else{
+                $(this).css({'color':'red'});
+            }
+        });
+
+        var date_times = new Date();
+        var is_firstClick = true;
+        $('#jb_tjBtn').click(function(){
+            if (is_firstClick == true) {
+                $('.jb_chose').each(function(){
+                    if ($(this).css("display") != "none") {
+                        jbNumber = $(this).prev().text();
+                        is_firstClick = false;
+                        var jbinfo = {
+                            cid: 12453189,
+                            jbinfo: jbNumber,
+                            isPass: '待审',
+                            isDel: '否'
+                        };
+                        console.log(jbinfo);
+                        $.ajax({
+                            type:'post',
+                            dateType:'json',
+                            url:'/Index/Jbsh/getJbInfo',
+                            data:{jbinfo:jbinfo},
+                            success:function(data){
+                                alert("举报成功，感谢您的反馈，我们会及时处理的。");
+                                $('.jb_infoContainer').hide();
+                                console.log(data);
+                            }
+                        })
+                    };
+                });
+            }else{
+                alert('您已经举报过了！');
+                return false;
+            };
+            if (jbNumber == undefined) {
+                alert('请选择一项举报内容再提交！');
+                return false;
+            };
+        });
+
+        $('.show-jbBtn').click(function(){
+            $('.jb_infoContainer').show();
+            if (is_firstClick == false) {
+                $('#jb_tjBtn').css({'background-color':'#bdbdbd'});
+                alert('您已经举报过了！');
+                $('.jb_infoContainer').hide();
+            };
+        });
+
+        $('#jb_qxBtn').click(function(){
+            $('.jb_infoContainer').hide();
+        });
+    </script>
+<div style="position: static; width: 0px; height: 0px; border: none; padding: 0px; margin: 0px;"><div id="trans-tooltip"><div id="tip-left-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left-top.png&quot;);"></div><div id="tip-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-top.png&quot;) repeat-x;"></div><div id="tip-right-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right-top.png&quot;);"></div><div id="tip-right" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right.png&quot;) repeat-y;"></div><div id="tip-right-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right-bottom.png&quot;);"></div><div id="tip-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-bottom.png&quot;) repeat-x;"></div><div id="tip-left-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left-bottom.png&quot;);"></div><div id="tip-left" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left.png&quot;);"></div><div id="trans-content"></div></div><div id="tip-arrow-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-arrow-bottom.png&quot;);"></div><div id="tip-arrow-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-arrow-top.png&quot;);"></div></div></body></html>
